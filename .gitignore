@@ -1,5 +1,15 @@
-# Tools
+# IntelliJ
 .idea
 *.iml
-*.drawio.bkp
 target
+
+# Drawio
+*.drawio.bkp
+
+# Terraform
+.terraform
+*.tfstate
+*.tfstate.backup
+
+# Sensitive data
+infra/air-chain-web-server-key-pair.pem

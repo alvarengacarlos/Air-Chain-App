@@ -7,7 +7,7 @@ services:
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: rootpw
-      MYSQL_DATABASE: air_chain_app_db
+      MYSQL_DATABASE: air_chain_backend_db
     volumes:
       - mysql_volume:/var/lib/mysql
     ports:
