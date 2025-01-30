@@ -1,4 +1,0 @@
-.terraform
-*.tfstate
-*.tfstate.backup
-air-chain-server-instance-key-pair.pem

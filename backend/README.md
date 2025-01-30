@@ -13,17 +13,25 @@
 ## Deploying
 - Configure the `src/main/resources/application.properties` file.
 
+- Run maven phases:
+```bash
+mvn clean install
+```
+
 > Warning: `flyway directory/drivers` directory must contain the `mysql-connector-j-9.1.0` jar file.  
 
 - Run the migrations:
 ```bash
-# Change the `-url` parameter 
-flyway -url=jdbc:mysql://root:rootpw@localhost:3306/air_chain_app_db -locations=filesystem:./migrations migrate
+flyway -url="jdbc:mysql://root:rootpw@localhost:3306/air_chain_backend_db" -locations="filesystem:./migrations" migrate
+#or
+flyway -url="jdbc:mysql://localhost:3306/air_chain_backend_db?user=root&password=rootpw" -locations="filesystem:../migrations" migrate
 ```
 
 - Run the app:
 ```bash
 mvn spring-boot:run
+#or
+java -jar /target/backend-*.jar
 ```
 
 ## Running locally
